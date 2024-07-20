@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Menu
@@ -9,6 +8,10 @@ namespace Menu
     {
         [SerializeField]
         private Button _play, _load, _unload;
+
+        [Space] 
+        [SerializeField]
+        private GameObject _loadingPanel, _failedPanel;
 
         private GameStorageController _gameStorageController;
 
@@ -21,12 +24,21 @@ namespace Menu
         {
             _gameStorageController.Loaded += OnSceneLoaded;
             _gameStorageController.Unloaded += OnSceneUnloaded;
+            _gameStorageController.Loading += OnLoding;
+            _gameStorageController.Failed += OnFailedLoad;
         }
 
         private void OnDisable()
         {
             _gameStorageController.Loaded -= OnSceneLoaded;
             _gameStorageController.Unloaded -= OnSceneUnloaded;
+            _gameStorageController.Loading -= OnLoding;
+            _gameStorageController.Failed -= OnFailedLoad;
+        }
+
+        private void OnFailedLoad()
+        {
+            _failedPanel.SetActive(true);
         }
 
         private void OnSceneUnloaded()
@@ -41,11 +53,18 @@ namespace Menu
             _play.interactable = true;
             _unload.interactable = true;
             _load.interactable = false;
+
+            _loadingPanel.SetActive(false);
+        }
+
+        private void OnLoding()
+        {
+            _loadingPanel.SetActive(true);
         }
 
         public void LoadGame()
         {
-            //SceneManager.LoadScene(_gameStorageController.SceneInstance);
+            _gameStorageController.SceneInstance.ActivateAsync();
         }
     }
 }

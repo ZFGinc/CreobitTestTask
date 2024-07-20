@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Clicker
+namespace Menu
 {
-    public class UI : MonoBehaviour
+    public class ReturnToMenu : MonoBehaviour
     {
         [SerializeField]
         private string _menuSceneName = "Menu";
 
-        public void ReturnToMenu()
+        public void Return()
         {
             SceneManager.LoadScene(_menuSceneName);
         }
