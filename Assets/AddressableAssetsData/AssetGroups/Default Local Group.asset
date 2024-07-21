@@ -17,6 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 59c8777cb7170714094726ce6fdd0711
   m_SerializeEntries:
+  - m_GUID: c8024bb2ad1b89a4fa5e01384c7dc320
+    m_Address: Assets/Scenes/RunnerGame.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Runner
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 541b3bacee38bce408f3fe1beb70b6f2
     m_Address: Assets/Scenes/ClickerGame.unity
     m_ReadOnly: 0

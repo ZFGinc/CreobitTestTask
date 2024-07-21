@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scene:
-    m_AssetGUID: 
+    m_AssetGUID: c8024bb2ad1b89a4fa5e01384c7dc320
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -1855,8 +1855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 95}
-  m_SizeDelta: {x: 420, y: 420}
+  m_AnchoredPosition: {x: 0, y: 145.89}
+  m_SizeDelta: {x: 420, y: 521.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174099800
 MonoBehaviour:
@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6d33dc3624755e840b87ad57fff84f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
