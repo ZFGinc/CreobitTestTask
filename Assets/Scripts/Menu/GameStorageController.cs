@@ -26,7 +26,7 @@ namespace Menu
                 _path = PlayerPrefs.GetString(NameKey);
             }
 
-            Addressables.InitializeAsync();
+            //Addressables.InitializeAsync();
         }
 
         public void LoadAsset()
