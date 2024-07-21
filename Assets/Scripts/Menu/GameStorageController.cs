@@ -31,7 +31,7 @@ namespace Menu
 
         public void LoadAsset()
         {
-            _scene.LoadSceneAsync(LoadSceneMode.Additive, false).Completed += OnSceneLoaded;
+            _scene.LoadSceneAsync(LoadSceneMode.Single, false).Completed += OnSceneLoaded;
             Loading?.Invoke();
         }
 

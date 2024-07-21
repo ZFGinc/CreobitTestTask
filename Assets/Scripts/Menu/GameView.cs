@@ -66,8 +66,6 @@ namespace Menu
         public void LoadGame()
         {
             _gameStorageController.SceneInstance.ActivateAsync();
-
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         }
     }
 }
