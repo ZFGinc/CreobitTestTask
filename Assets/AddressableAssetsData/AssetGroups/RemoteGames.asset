@@ -17,17 +17,17 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3cf3fe7d364d7f1498b6538d2ded9759
   m_SerializeEntries:
-  - m_GUID: 541b3bacee38bce408f3fe1beb70b6f2
-    m_Address: Assets/Scenes/ClickerGame.unity
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Clicker
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c8024bb2ad1b89a4fa5e01384c7dc320
     m_Address: Assets/Scenes/RunnerGame.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Runner
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 541b3bacee38bce408f3fe1beb70b6f2
+    m_Address: Assets/Scenes/ClickerGame.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Clicker
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 10e45586d8c8c764cbf44a5ea22a55df, type: 2}
