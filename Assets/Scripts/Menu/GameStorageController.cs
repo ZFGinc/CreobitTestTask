@@ -14,13 +14,24 @@ namespace Menu
         [SerializeField] 
         private AssetReference _scene;
         private AsyncOperationHandle<SceneInstance> _loadHandle;
-        private AsyncOperationHandle<SceneInstance> _unloadHandle;
+        private string _path;
 
         public SceneInstance SceneInstance => _loadHandle.Result;
+        public string NameKey => _scene.ToString();
+
+        private void Awake()
+        {
+            if (PlayerPrefs.HasKey(NameKey))
+            {
+                _path = PlayerPrefs.GetString(NameKey);
+            }
+
+            Addressables.InitializeAsync();
+        }
 
         public void LoadAsset()
         {
-            _scene.LoadSceneAsync(LoadSceneMode.Single, false).Completed += OnSceneLoaded;
+            _scene.LoadSceneAsync(LoadSceneMode.Additive, false).Completed += OnSceneLoaded;
             Loading?.Invoke();
         }
 
@@ -35,8 +46,6 @@ namespace Menu
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                _unloadHandle = handle;
-                Addressables.Release(_unloadHandle);
                 Unloaded?.Invoke();
             }
         }
@@ -46,13 +55,9 @@ namespace Menu
             if(handle.Status == AsyncOperationStatus.Succeeded)
             {
                 _loadHandle = handle;
+
                 Loaded?.Invoke();
             }
-        }
-
-        private void OnDestroy()
-        {
-            Addressables.Release(_loadHandle);
         }
     }
 }

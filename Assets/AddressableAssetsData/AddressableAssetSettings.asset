@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 59c8777cb7170714094726ce6fdd0711
+  m_DefaultGroup: 3cf3fe7d364d7f1498b6538d2ded9759
   m_currentHash:
     serializedVersion: 2
-    Hash: 76881a313ac470cf4e2cfb066b256491
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: f45be0ea6ff88914bbcd1c12579b5d7a, type: 2}
-  - {fileID: 11400000, guid: d0cd4ebae0b923442a4c84ea04277dba, type: 2}
+  - {fileID: 11400000, guid: f91dd617b95f8ad4881c42b30214d277, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -60,13 +60,13 @@ MonoBehaviour:
       - m_Id: 07a37e6d4080f97448766d7a1b7f8a50
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 13d6ae4b6a9bd5d4a8ccfc0e88ab1b5d
-        m_Value: ServerData/[BuildTarget]
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: ed821ae01710be245ae0012b9892d2a6
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 1f46c76b518148b45b4d417585c2018f
         m_Value: ServerData/[BuildTarget]
       - m_Id: 6da3affd172fdc34786dc973a9853f21
-        m_Value: http://worldofcubes.free.nf/StandaloneWindows64
+        m_Value: https://github.com/ZFGinc/CreobitTestTask/tree/main/ServerData/StandaloneWindows64
     m_ProfileEntryNames:
     - m_Id: 07a37e6d4080f97448766d7a1b7f8a50
       m_Name: BuildTarget
@@ -91,7 +91,7 @@ MonoBehaviour:
     - Runner
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
-  - {fileID: 11400000, guid: 6284e231c06920641b4403afa63f29b4, type: 2}
+  - {fileID: 11400000, guid: 0538163e84c125b42855bbea09c1f5e9, type: 2}
   m_InitializationObjects: []
   m_CertificateHandlerType:
     m_AssemblyName: 

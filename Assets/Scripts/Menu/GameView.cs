@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Menu
@@ -65,6 +66,8 @@ namespace Menu
         public void LoadGame()
         {
             _gameStorageController.SceneInstance.ActivateAsync();
+
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         }
     }
 }

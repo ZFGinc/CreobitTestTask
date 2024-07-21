@@ -9,7 +9,7 @@ namespace Menu
         private string _menuSceneName = "Menu";
 
         public void Return()
-        {
+        {  
             SceneManager.LoadScene(_menuSceneName);
         }
     }

@@ -9,9 +9,11 @@ namespace Clicker
     {
         [SerializeField]
         private Sprite _down, _up;
+
         [Space]
         [SerializeField]
         private Text _clicksView;
+
         [Space]
         [SerializeField]
         private GameObject _arrow;
