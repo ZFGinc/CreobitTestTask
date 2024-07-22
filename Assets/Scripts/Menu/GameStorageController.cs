@@ -13,39 +13,58 @@ namespace Menu
 
         [SerializeField] 
         private AssetReference _scene;
+
         private AsyncOperationHandle<SceneInstance> _loadHandle;
         private string _path;
 
         public SceneInstance SceneInstance => _loadHandle.Result;
-        public string NameKey => _scene.ToString();
+        private string NameKey => _scene.ToString();
 
         private void Awake()
         {
             if (PlayerPrefs.HasKey(NameKey))
             {
                 _path = PlayerPrefs.GetString(NameKey);
+                LoadLocalAsset();
             }
+        }
 
-            //Addressables.InitializeAsync();
+        public void LoadScene()
+        {
+            SceneInstance.ActivateAsync();
         }
 
         public void LoadAsset()
         {
-            _scene.LoadSceneAsync(LoadSceneMode.Single, false).Completed += OnSceneLoaded;
+            if (Application.internetReachability == NetworkReachability.NotReachable)
+            {
+                Failed?.Invoke();
+                return;
+            }
+
             Loading?.Invoke();
+            _scene.LoadSceneAsync(LoadSceneMode.Single, false).Completed += OnSceneLoaded;
         }
 
         public void UnloadAsset()
         {
-            if (Application.internetReachability == NetworkReachability.NotReachable) Failed?.Invoke();
-
             Addressables.UnloadSceneAsync(SceneInstance).Completed += OnSceneUnloaded;
+        }
+
+        private void LoadLocalAsset()
+        {
+            if (_path == string.Empty) return;
+
+            Loading?.Invoke();
+            Addressables.LoadSceneAsync(_path, LoadSceneMode.Single, false).Completed += OnSceneLoaded;
         }
 
         private void OnSceneUnloaded(AsyncOperationHandle<SceneInstance> handle)
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
+                PlayerPrefs.DeleteKey(NameKey);
+                _path = string.Empty;
                 Unloaded?.Invoke();
             }
         }
@@ -55,7 +74,9 @@ namespace Menu
             if(handle.Status == AsyncOperationStatus.Succeeded)
             {
                 _loadHandle = handle;
+                _path = handle.Result.Scene.path;
 
+                PlayerPrefs.SetString(NameKey, _path);
                 Loaded?.Invoke();
             }
         }

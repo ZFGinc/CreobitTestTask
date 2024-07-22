@@ -65,7 +65,7 @@ namespace Menu
 
         public void LoadGame()
         {
-            _gameStorageController.SceneInstance.ActivateAsync();
+            _gameStorageController.LoadScene();
         }
     }
 }
