@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Menu
@@ -63,9 +62,19 @@ namespace Menu
             _loadingPanel.SetActive(true);
         }
 
-        public void LoadGame()
+        public void Play()
         {
-            _gameStorageController.LoadScene();
+            _gameStorageController.LoadGame();
+        }
+
+        public void DownloadGame()
+        {
+            _gameStorageController.LoadAsset();
+        }
+
+        public void RemoveGame()
+        {
+            _gameStorageController.UnloadAsset();
         }
     }
 }
