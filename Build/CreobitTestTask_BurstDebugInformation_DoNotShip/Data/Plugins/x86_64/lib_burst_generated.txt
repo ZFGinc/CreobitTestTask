@@ -55,7 +55,6 @@ Library: E:\UnityProjects\CreobitTestTask\Temp\BurstOutput\Data\Plugins\x86_64\l
 --linker-options=PdbAltPath="CreobitTestTask_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=E:\UnityProjects\CreobitTestTask\Temp\Burst
---debug=Full
 --key-folder=D:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
 --decode-folder=E:\UnityProjects\CreobitTestTask\Library\Burst
 --output=E:\UnityProjects\CreobitTestTask\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
@@ -148,7 +147,6 @@ Library: E:\UnityProjects\CreobitTestTask\Temp\BurstOutput\Data\Plugins\x86_64\l
 --linker-options=PdbAltPath="CreobitTestTask_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=E:\UnityProjects\CreobitTestTask\Temp\Burst
---debug=Full
 --key-folder=D:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
 --decode-folder=E:\UnityProjects\CreobitTestTask\Library\Burst
 --output=E:\UnityProjects\CreobitTestTask\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
